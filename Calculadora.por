@@ -20,7 +20,9 @@ programa {
     }
 
     senao se (sinal == '-'){
-      escreva("Seu resultado é: ", numero1,numero2, numero3)
+      escreva("Seu resultado é: ", numero1-numero2-numero3)
     }
+    senao se (sinal == "*")
+    escreva("Seu resultado é: ", numero1*numero2*numero3)
   }
 }
