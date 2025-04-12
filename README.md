@@ -15,10 +15,10 @@ Desenvolver colaborativamente um algoritmo em Portugol de que realiza a soma, su
     Primeiramente, loguei na minha conta do github, depois fui na aba dos meus repositórios, onde eu selecionei a opção de criar um novo repositório e o configurei como pedido antes, deixando-o público e adicionando um arquivo README. Depois disso fui nas configurações do repositório para adicionar os outros integrantes do grupo como colaboradores.
 - Como Configurou o Git? não deixe exposto sua chave.
     Comecei listando minhas chaves ssh, depois segui os comandos para criar uma nova chave e configurá-la.
-- Criou o arquivo `algoritmo.pg` com a estrutura inicial:
+- Criou o arquivo `Calculadora.por` com a estrutura inicial:
 
-    programa {
-    funcao inicio() {
+       programa {
+        funcao inicio() {
         real numero1, numero2, numero3
         cadeia sinal
 
@@ -41,8 +41,8 @@ Desenvolver colaborativamente um algoritmo em Portugol de que realiza a soma, su
         senao se (sinal == '-'){
         escreva("Seu resultado é: ", numero1,numero2, numero3)
         }
-    }
-}
+       }
+      }
 
 - fez o que? depois?...
     Salvei o arquivo calculadora.por na pasta Atividade-Final-Git, utilizei o comando git status antes e depois do git add ., para verificar as alterações e se elas foram adicionadas com sucesso, após isso fiz um commit com descrição das ações feitas por mim e encerrei com um git push para subí-las.
@@ -51,18 +51,85 @@ Desenvolver colaborativamente um algoritmo em Portugol de que realiza a soma, su
 - atualizei e botei aquela variavel de multiplicação e coloquei os sinais de subtração que eram virgulas na variavel de subtração.
 - Fez `git pull` após o commit de João.
 - Adicionou lógica de multiplicação e corriji a de subtração
- 
+  
+- arquivo `Calculadora.por` com alterações:
 
-### Beltrano Gomes 
-- Como Configurou o Git? não deixe exposto sua chave.
-- Fez `git pull` após o commit de Ciclana.
-- Finalizou o algoritmo com lógica . . .
+      programa {
+      funcao inicio() {
+        real numero1, numero2, numero3
+        cadeia sinal
+
+        escreva("Digite a operação desejada (+, -, *, /): ")
+        leia(sinal)
+
+        escreva("Digite o primeiro número: ")
+        leia(numero1)
+
+        escreva("Digite o segundo número: ")
+        leia(numero2)
+
+        escreva("Digite o terceiro número: ")
+        leia(numero3)
+
+        se (sinal == '+'){
+        escreva ("Seu resultado é: ", numero1+numero2+numero3)
+        }
+
+        senao se (sinal == '-'){
+        escreva("Seu resultado é: ", numero1-numero2-numero3)
+        }
+        senao se (sinal == "*")
+        escreva("Seu resultado é: ", numero1*numero2*numero3)
+        }
+        }
 
 
-## Comandos utilizados
-Todos os comandos foram executados via terminal utilizando chave SSH:
+### Angelo Dos Santos
+- fez git clone após o commit de Saulo
+- Coloquei a operação divisão e senão para caso desse algum erro
+- corriji o Colchete que faltava no senao se da multiplicação
+- arquivo `Calculadora.por` com alterações:
+  
+      programa {
+      funcao inicio() {
+      real numero1, numero2, numero3
+      cadeia sinal
 
-### Comandos de João Gabriel
+      escreva("Digite a operação desejada (+, -, *, /): ")
+      leia(sinal)
+
+      escreva("Digite o primeiro número: ")
+      leia(numero1)
+
+      escreva("Digite o segundo número: ")
+      leia(numero2)
+
+      escreva("Digite o terceiro número: ")
+      leia(numero3)
+
+      se (sinal == '+'){
+      escreva ("Seu resultado é: ", numero1+numero2+numero3)
+      }
+
+      senao se (sinal == '-'){
+      escreva("Seu resultado é: ", numero1-numero2-numero3)
+      }
+      senao se (sinal == "*"){
+      escreva("Seu resultado é: ", numero1*numero2*numero3)
+      }
+      senao se (sinal == "/"){
+      escreva("Seu resultado é: ", numero1/numero2/numero3)
+      }
+      senao{
+      escreva("Valor ou Sinal de operação inválido.")
+      }
+      }
+      }
+  
+## Observações
+Cada etapa foi realizada por apenas um integrante por vez, respeitando a ordem de commits e a integridade do código.
+
+# Comandos de João
 
 jgsou@Not-Okamiu_u MINGW64 /c/Workspace/Workspace-Faculdade/Git/Projeto_final
 $ ls -al ~/.ssh
@@ -175,7 +242,10 @@ Total 4 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
 To github.com:Joao-Gabriel17/Atividade-Final-Git.git
    4f25c6a..48104e3  main -> main
 
-### Comandos de Saulo
+
+
+# Comandos de Saulo
+
 compuni@Lab6M07 MINGW32 ~
 $ git config --global user.saulosdfg
 
@@ -383,8 +453,114 @@ To github.com:Joao-Gabriel17/Atividade-Final-Git.git
 
 compuni@Lab6M07 MINGW32 /c/Atividade-Final-Git (main)
 $
-                   
-### Comandos de beltrano
 
-## Observações
-Cada etapa foi realizada por apenas um integrante por vez, respeitando a ordem de commits e a integridade do código.
+
+                   
+# Comandos de Angelo
+
+usuário@DESKTOP-85TS0NH MINGW64 /c/Atividade final GitHub
+$ git config --global user.email angelodossantosmonteiro0@edu.unifil.br
+
+usuário@DESKTOP-85TS0NH MINGW64 /c/Atividade final GitHub
+$ ssh-keygen -t rsa -b 4096 -C angelodossantosmonteiro0@edu.unfil.br
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/usu▒rio/.ssh/id_rsa):
+/c/Users/usu▒rio/.ssh/id_rsa already exists.
+Overwrite (y/n)? y
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /c/Users/usu▒rio/.ssh/id_rsa
+Your public key has been saved in /c/Users/usu▒rio/.ssh/id_rsa.pub
+The key fingerprint is:
+SHA256:n4Eg/jLID8MfmlHSyZcpSy9rfwBpng3RVJ131eyLFKA angelodossantosmonteiro0@edu.unfil.br
+The key's randomart image is:
++---[RSA 4096]----+
+|     o.... o.  oo|
+|    . .   + ... o|
+|    .o.  E . ... |
+|   +=o + .   .  .|
+|  .oO=+ S . . . .|
+| o =o*o  . o . . |
+|  B * o.  o      |
+|   O.*  .        |
+|  o.+...         |
++----[SHA256]-----+
+
+usuário@DESKTOP-85TS0NH MINGW64 /c/Atividade final GitHub
+$ eval "$(ssh-agent -s)"
+Agent pid 1507
+
+usuário@DESKTOP-85TS0NH MINGW64 /c/Atividade final GitHub
+$ clip < ~/.ssh/id_rsa.pub
+
+usuário@DESKTOP-85TS0NH MINGW64 /c/Atividade final GitHub
+$ ssh -T git@github.com
+Hi angelmonsan! You've successfully authenticated, but GitHub does not provide shell access.
+
+usuário@DESKTOP-85TS0NH MINGW64 /c/Atividade final GitHub
+$ git clone git@github.com:Joao-Gabriel17/Atividade-Final-Git.git
+Cloning into 'Atividade-Final-Git'...
+remote: Enumerating objects: 16, done.
+remote: Counting objects: 100% (16/16), done.
+remote: Compressing objects: 100% (13/13), done.
+remote: Total 16 (delta 3), reused 6 (delta 1), pack-reused 0 (from 0)
+Receiving objects: 100% (16/16), 7.14 KiB | 1.19 MiB/s, done.
+Resolving deltas: 100% (3/3), done.
+
+usuário@DESKTOP-85TS0NH MINGW64 /c/Atividade final GitHub
+$ cd repositorio
+bash: cd: repositorio: No such file or directory
+
+usuário@DESKTOP-85TS0NH MINGW64 /c/Atividade final GitHub
+$ cd Atividade-Final-Git
+
+usuário@DESKTOP-85TS0NH MINGW64 /c/Atividade final GitHub/Atividade-Final-Git (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Calculadora.por
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+usuário@DESKTOP-85TS0NH MINGW64 /c/Atividade final GitHub/Atividade-Final-Git (main)
+$ git add .
+
+usuário@DESKTOP-85TS0NH MINGW64 /c/Atividade final GitHub/Atividade-Final-Git (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   Calculadora.por
+
+
+usuário@DESKTOP-85TS0NH MINGW64 /c/Atividade final GitHub/Atividade-Final-Git (main)
+$ git commit -m "Adição da subtração e adição do senão , para caso número ou operação não funcione."
+[main f1ab903] Adição da subtração e adição do senão , para caso número ou operação não funcione.
+ 1 file changed, 8 insertions(+), 1 deletion(-)
+
+usuário@DESKTOP-85TS0NH MINGW64 /c/Atividade final GitHub/Atividade-Final-Git (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+usuário@DESKTOP-85TS0NH MINGW64 /c/Atividade final GitHub/Atividade-Final-Git (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 472 bytes | 472.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To github.com:Joao-Gabriel17/Atividade-Final-Git.git
+   9eb234b..f1ab903  main -> main
+   
