@@ -22,7 +22,14 @@ programa {
     senao se (sinal == '-'){
       escreva("Seu resultado é: ", numero1-numero2-numero3)
     }
-    senao se (sinal == "*")
+    senao se (sinal == "*"){
     escreva("Seu resultado é: ", numero1*numero2*numero3)
+    }
+    senao se (sinal == "/"){
+    escreva("Seu resultado é: ", numero1/numero2/numero3)
+    }
+    senao{
+    escreva("Valor ou Sinal de operação inválido.")
+    }
   }
 }
