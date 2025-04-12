@@ -45,7 +45,7 @@ Desenvolver colaborativamente um algoritmo em Portugol de que realiza a soma, su
 }
 
 - fez o que? depois?...
-    Salvei o arquivo calculadora.por na pasta Atividade-Final-Git, 
+    Salvei o arquivo calculadora.por na pasta Atividade-Final-Git, utilizei o comando git status antes e depois do git add ., para verificar as alterações e se elas foram adicionadas com sucesso, após isso fiz um commit com descrição das ações feitas por mim e encerrei com um git push para subí-las.
 
 ### Saulo Nakayama
 - atualizei e botei aquela variavel de multiplicação e coloquei os sinais de subtração que eram virgulas na variavel de subtração.
@@ -63,6 +63,117 @@ Desenvolver colaborativamente um algoritmo em Portugol de que realiza a soma, su
 Todos os comandos foram executados via terminal utilizando chave SSH:
 
 ### Comandos de João Gabriel
+
+jgsou@Not-Okamiu_u MINGW64 /c/Workspace/Workspace-Faculdade/Git/Projeto_final
+$ ls -al ~/.ssh
+total 31
+drwxr-xr-x 1 jgsou 197609    0 Mar 28 19:39 ./
+drwxr-xr-x 1 jgsou 197609    0 Apr 11 19:05 ../
+-rw-r--r-- 1 jgsou 197609  411 Feb 12 17:37 id_ed25519
+-rw-r--r-- 1 jgsou 197609  103 Feb 12 17:37 id_ed25519.pub
+-rw-r--r-- 1 jgsou 197609 3389 Mar 28 19:32 id_rsa
+-rw-r--r-- 1 jgsou 197609  747 Mar 28 19:32 id_rsa.pub
+-rw-r--r-- 1 jgsou 197609  828 Mar 28 19:39 known_hosts
+-rw-r--r-- 1 jgsou 197609   92 Jan 29 15:09 known_hosts.old
+
+jgsou@Not-Okamiu_u MINGW64 /c/Workspace/Workspace-Faculdade/Git/Projeto_final
+$ ssh-keygen -t rsa -b 4096 -C "jg.souzaalves2@hotmail.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/jgsou/.ssh/id_rsa):
+/c/Users/jgsou/.ssh/id_rsa already exists.
+Overwrite (y/n)? y
+Enter passphrase for "/c/Users/jgsou/.ssh/id_rsa" (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /c/Users/jgsou/.ssh/id_rsa
+Your public key has been saved in /c/Users/jgsou/.ssh/id_rsa.pub
+The key fingerprint is:
+SHA256:Sy7+w74ZDhw7fLx9Pe4+7FJPGPQTz78f6vz11WXsoNM jg.souzaalves2@hotmail.com
+The key's randomart image is:
++---[RSA 4096]----+
+|                 |
+|              .. |
+|             . oo|
+|              .o+|
+|      . S     .o*|
+|     o * .   oo+=|
+|      B.*   o+E+*|
+|     . *o=  +.*.*|
+|      .oBo...X*++|
++----[SHA256]-----+
+
+jgsou@Not-Okamiu_u MINGW64 /c/Workspace/Workspace-Faculdade/Git/Projeto_final
+$ eval "$(ssh-agent -s)"
+Agent pid 617
+
+jgsou@Not-Okamiu_u MINGW64 /c/Workspace/Workspace-Faculdade/Git/Projeto_final
+$ ssh-add ~/.ssh/id_rsa
+Identity added: /c/Users/jgsou/.ssh/id_rsa (jg.souzaalves2@hotmail.com)
+
+jgsou@Not-Okamiu_u MINGW64 /c/Workspace/Workspace-Faculdade/Git/Projeto_final
+$ clip < ~/.ssh/id_rsa.pub
+
+jgsou@Not-Okamiu_u MINGW64 /c/Workspace/Workspace-Faculdade/Git/Projeto_final
+$ ssh -T git@github.com
+Hi Joao-Gabriel17! You've successfully authenticated, but GitHub does not provide shell access.
+
+jgsou@Not-Okamiu_u MINGW64 /c/Workspace/Workspace-Faculdade/Git/Projeto_final
+$ git clone git@github.com:Joao-Gabriel17/Atividade-Final-Git.git
+Cloning into 'Atividade-Final-Git'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (3/3), done.
+
+jgsou@Not-Okamiu_u MINGW64 /c/Workspace/Workspace-Faculdade/Git/Projeto_final
+$ cd Atividade-Final-Git/
+
+jgsou@Not-Okamiu_u MINGW64 /c/Workspace/Workspace-Faculdade/Git/Projeto_final/Atividade-Final-Git (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Calculadora.por
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+jgsou@Not-Okamiu_u MINGW64 /c/Workspace/Workspace-Faculdade/Git/Projeto_final/Atividade-Final-Git (main)
+$ git add .
+warning: in the working copy of 'Calculadora.por', LF will be replaced by CRLF the next time Git touches it
+
+jgsou@Not-Okamiu_u MINGW64 /c/Workspace/Workspace-Faculdade/Git/Projeto_final/Atividade-Final-Git (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   Calculadora.por
+        modified:   README.md
+
+
+jgsou@Not-Okamiu_u MINGW64 /c/Workspace/Workspace-Faculdade/Git/Projeto_final/Atividade-Final-Git (main)
+$ git commit -m "Adição do arquivo calculadora e alteração no README até a pergunta (fez o que?), que está imcompleta ainda"
+[main 48104e3] Adição do arquivo calculadora e alteração no README até a pergunta (fez o que?), que está imcompleta ainda
+ 2 files changed, 97 insertions(+), 1 deletion(-)
+ create mode 100644 Calculadora.por
+
+jgsou@Not-Okamiu_u MINGW64 /c/Workspace/Workspace-Faculdade/Git/Projeto_final/Atividade-Final-Git (main)
+$ git push origin main
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 1.59 KiB | 407.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To github.com:Joao-Gabriel17/Atividade-Final-Git.git
+   4f25c6a..48104e3  main -> main
 
 ### Comandos de Saulo
 compuni@Lab6M07 MINGW32 ~
@@ -273,34 +384,6 @@ To github.com:Joao-Gabriel17/Atividade-Final-Git.git
 compuni@Lab6M07 MINGW32 /c/Atividade-Final-Git (main)
 $
                    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ### Comandos de beltrano
 
 ## Observações
